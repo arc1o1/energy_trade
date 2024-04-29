@@ -12,40 +12,34 @@ class SignupScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         backgroundColor: CcColors.primary,
         automaticallyImplyLeading: true,
         iconTheme: const IconThemeData(color: Colors.white),
+        title: Text(
+          "New Account",
+          style: Theme.of(context).textTheme.headlineSmall!.copyWith(
+                fontSize: 21,
+                fontWeight: FontWeight.bold,
+                color: Colors.grey.shade100,
+              ),
+        ),
       ),
       backgroundColor: CcColors.secondary,
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(20),
+      body: const SingleChildScrollView(
+        padding: EdgeInsets.all(20),
         child: Form(
           child: Column(
             children: [
-              const SizedBox(height: 5),
-              // title
-              Text(
-                "New Account",
-                style: Theme.of(context).textTheme.headlineSmall!.copyWith(
-                      color: CcColors.primary,
-                      fontSize: 25,
-                      fontWeight: FontWeight.bold,
-                    ),
-              ),
-
-              const SizedBox(height: 10),
-
-              const SignupForm(),
-
-              // const SizedBox(height: CcSizes.spaceBtnSections),
+              SignupForm(),
 
               // divider
-              const FormDivider(dividerText: "Or Sign In With"),
+              FormDivider(dividerText: "Or Sign In With"),
 
-              const SizedBox(height: CcSizes.spaceBtnSections / 2),
+              SizedBox(height: CcSizes.spaceBtnSections / 2),
 
               // social button
-              const SocialButton(),
+              SocialButton(),
             ],
           ),
         ),

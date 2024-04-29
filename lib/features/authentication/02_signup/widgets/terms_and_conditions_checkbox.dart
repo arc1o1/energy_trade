@@ -42,9 +42,9 @@ class TermsAndConditionsCheckBox extends StatelessWidget {
                   text: CcTexts.privacyPolicy,
                   style: Theme.of(context).textTheme.labelMedium!.copyWith(
                         fontWeight: FontWeight.w800,
-                        color: CcColors.primary,
+                        color: Colors.blue,
                         decoration: TextDecoration.underline,
-                        decorationColor: CcColors.primary,
+                        decorationColor: Colors.blue,
                       ),
                 ),
                 TextSpan(
@@ -56,9 +56,9 @@ class TermsAndConditionsCheckBox extends StatelessWidget {
                   text: CcTexts.termsOfUse,
                   style: Theme.of(context).textTheme.labelMedium!.copyWith(
                         fontWeight: FontWeight.w800,
-                        color: CcColors.primary,
+                        color: Colors.blue,
                         decoration: TextDecoration.underline,
-                        decorationColor: CcColors.primary,
+                        decorationColor: Colors.blue,
                       ),
                 ),
               ]),

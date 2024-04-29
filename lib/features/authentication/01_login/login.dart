@@ -18,39 +18,44 @@ class LoginScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(height: screenHeight / 10),
+            SizedBox(height: screenHeight / 7),
 
             // lock icon
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(
-                  Icons.lock_rounded,
-                  size: screenHeight / 7,
-                  color: CcColors.primary,
+                // Icon(
+                //   Icons.lock_rounded,
+                //   size: screenHeight / 7,
+                //   color: CcColors.primary,
+                // ),
+
+                // const SizedBox(width: CcSizes.spaceBtnItems_1 / 2),
+
+                // welcoming Text
+                Column(
+                  children: [
+                    Text(
+                      "Welcome Back!",
+                      style: Theme.of(context)
+                          .textTheme
+                          .headlineSmall!
+                          .copyWith(
+                              color: CcColors.primary,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 24),
+                    ),
+                    const SizedBox(height: CcSizes.spaceBtnItems_2 / 3),
+                    Text(
+                      "Please Login To Continue",
+                      style: Theme.of(context)
+                          .textTheme
+                          .headlineSmall!
+                          .copyWith(fontSize: 14),
+                    ),
+                  ],
                 ),
               ],
-            ),
-
-            const SizedBox(height: CcSizes.spaceBtnItems_1 / 2),
-
-            // welcoming Text
-            Text(
-              "Welcome Back!",
-              style: Theme.of(context).textTheme.headlineSmall!.copyWith(
-                  color: CcColors.primary,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 24),
-            ),
-
-            const SizedBox(height: CcSizes.spaceBtnItems_2 / 3),
-
-            Text(
-              "Please Login To Continue",
-              style: Theme.of(context)
-                  .textTheme
-                  .headlineSmall!
-                  .copyWith(fontSize: 14),
             ),
 
             const SizedBox(height: CcSizes.spaceBtnItems_2),

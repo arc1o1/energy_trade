@@ -7,9 +7,9 @@ class CcColors {
   CcColors._();
 
   // app basic colors
-  static const Color primary = Color(0xFF10243D);
-  static const Color secondary = Color(0xFFD0DCE8);
-  static const Color accent = Color(0xFF804F24);
+  static const Color primary = Colors.green;
+  static Color secondary = Colors.grey.shade300;
+  static const Color accent = Colors.blue;
 
   // app text colors
   static const Color textPrimary = Color(0xFF333333);

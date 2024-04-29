@@ -46,6 +46,9 @@ dependencies:
   qr: ^3.0.1
   qr_flutter: ^4.1.0
   qr_image: ^1.0.0
+  cached_network_image: ^3.3.1
+  shimmer: ^3.0.0
+  lottie: ^3.0.0
   
 
 
@@ -70,8 +73,8 @@ flutter:
   #   - assets/images/onboarding_images/
   #   - assets/images/auth_images/
   #   - assets/images/banners/
-  #   - assets/images/user/
-  #   - assets/images/mobile_ops/
+    - assets/images/user/
+    - assets/images/energies/
   #   - assets/images/products/
     - assets/brands/
   #   - assets/icons/categories/

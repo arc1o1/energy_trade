@@ -1,0 +1,1 @@
+ /home/techsphere/Downloads/personal_projects_&_issues/04_flutter_projects/energy_trade/.dart_tool/flutter_build/83f6cea01415996192082717e2a8db30/native_assets.yaml: 

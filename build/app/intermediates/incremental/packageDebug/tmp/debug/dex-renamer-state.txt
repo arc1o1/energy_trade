@@ -1,4 +1,4 @@
-#Sat Apr 06 23:34:48 AST 2024
-base.0=/home/techsphere/Downloads/personal_projects_&_issues/energy_trade/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+#Mon Apr 29 18:21:21 AST 2024
+base.0=/home/techsphere/Downloads/personal_projects_&_issues/04_flutter_projects/energy_trade/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

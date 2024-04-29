@@ -4,7 +4,7 @@
             "outputFile": "com.example.energy_trade.app-mergeDebugResources-11:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/home/techsphere/Downloads/personal_projects_&_issues/energy_trade/android/app/src/main/res/values-night/styles.xml",
+                    "source": "/home/techsphere/Downloads/personal_projects_&_issues/04_flutter_projects/energy_trade/android/app/src/main/res/values-night/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
