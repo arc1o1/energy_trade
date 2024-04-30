@@ -4,7 +4,7 @@ import 'package:energy_trade/common/list_tile/user_profile_tile.dart';
 import 'package:energy_trade/common/texts/section_heading.dart';
 import 'package:energy_trade/features/personnalization/02_profile/profile.dart';
 import 'package:energy_trade/features/personnalization/03_wallet/wallet.dart';
-import 'package:energy_trade/features/shop/02_cart/cart.dart';
+import 'package:energy_trade/features/shop/02_analytics/analytics.dart';
 import 'package:energy_trade/utils/constants/colors.dart';
 import 'package:energy_trade/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
@@ -61,9 +61,9 @@ class SettingsScreen extends StatelessWidget {
                     // const SizedBox(height: CcSizes.spaceBtnItems_1 / 2),
 
                     CcSettingsMenuTile(
-                      icon: Icons.shopping_cart_checkout_outlined,
-                      title: 'Cart',
-                      onTap: () => Get.to(() => const CartScreen()),
+                      icon: Icons.analytics,
+                      title: 'Analytics',
+                      onTap: () => Get.to(() => const AnalyticsScreen()),
                     ),
 
                     CcSettingsMenuTile(

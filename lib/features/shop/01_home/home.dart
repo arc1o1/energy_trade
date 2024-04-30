@@ -1,4 +1,3 @@
-import 'package:energy_trade/common/cart/cart_counter_item.dart';
 import 'package:energy_trade/common/drawer/drawer.dart';
 import 'package:energy_trade/features/shop/01_home/widgets/buying_tab.dart';
 import 'package:energy_trade/features/shop/01_home/widgets/explore_tab.dart';
@@ -31,13 +30,12 @@ class HomeScreen extends StatelessWidget {
           ),
           actions: [
             IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
-            CartCounterIcon(iconColor: Colors.grey.shade100),
-            const SizedBox(width: 10)
+            const SizedBox(width: 10),
           ],
           bottom: TabBar(
             tabs: const [
               Tab(text: "Explore"),
-              Tab(text: "Marketplace"),
+              Tab(text: "Market"),
               Tab(text: "Buy"),
               Tab(text: "Sell"),
             ],

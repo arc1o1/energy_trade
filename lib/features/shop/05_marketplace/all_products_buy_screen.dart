@@ -58,7 +58,7 @@ class AllProductsScreen extends StatelessWidget {
             children: [
               // listview
               ListView.separated(
-                itemCount: 2,
+                itemCount: 6,
                 shrinkWrap: true,
                 scrollDirection: Axis.vertical,
                 physics: const NeverScrollableScrollPhysics(),

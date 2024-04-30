@@ -49,6 +49,11 @@ dependencies:
   cached_network_image: ^3.3.1
   shimmer: ^3.0.0
   lottie: ^3.0.0
+
+  # charts
+  syncfusion_flutter_charts: ^24.2.9
+  fl_chart: ^0.67.0
+  scrollable_table_view: ^2.0.3
   
 
 

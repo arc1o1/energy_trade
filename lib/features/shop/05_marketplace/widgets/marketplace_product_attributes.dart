@@ -25,6 +25,62 @@ class MarketplaceProductAttributes extends StatelessWidget {
             padding: const EdgeInsets.all(20),
             child: Column(
               children: [
+                Row(
+                  children: [
+                    const CcSectionHeading(
+                        title: "Seller     ", showActionButton: false),
+                    const SizedBox(width: CcSizes.spaceBtnItems_1),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: [
+                            // seller name
+                            const CcProductTitleText(
+                                title: "name\t\t\t : ", smallSize: true),
+                            const SizedBox(width: CcSizes.spaceBtnItems_1 + 10),
+                            Text(
+                              "HE Power Solution",
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .titleSmall!
+                                  .copyWith(
+                                      fontWeight: FontWeight.w600,
+                                      color: const Color(0xFF0D98BA)),
+                            ),
+                          ],
+                        ),
+
+                        const SizedBox(height: 10),
+
+                        // location
+                        Row(
+                          children: [
+                            const CcProductTitleText(
+                                title: "location :", smallSize: true),
+                            const SizedBox(width: CcSizes.spaceBtnItems_1 + 6),
+                            Text(
+                              "DSM",
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .titleSmall!
+                                  .copyWith(
+                                      fontWeight: FontWeight.w600,
+                                      color: const Color(0xFF0D98BA)),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+
+                const SizedBox(height: CcSizes.spaceBtnItems_2),
+
+                const Divider(),
+
+                const SizedBox(height: CcSizes.spaceBtnItems_2),
+
                 // title, price and stock status
                 Row(
                   children: [
@@ -113,7 +169,7 @@ class MarketplaceProductAttributes extends StatelessWidget {
                                 title: "terms : ", smallSize: true),
                             const SizedBox(width: CcSizes.spaceBtnItems_1 + 12),
                             Text(
-                              "12 Months, Fixed",
+                              "Max 20 kWh per buyer",
                               style: Theme.of(context)
                                   .textTheme
                                   .titleSmall!
@@ -129,15 +185,6 @@ class MarketplaceProductAttributes extends StatelessWidget {
                 ),
 
                 const SizedBox(height: 10),
-
-                // variation description, what dos the variant consist of
-                const CcProductTitleText(
-                  title:
-                      "Imagine turning sunshine into savings!\nSolar power lets you harness the free energy of the sun to power your home.  Reduce your electricity bill, boost your independence, and invest in a cleaner future - all with beautiful solar panels on your roof.",
-                  smallSize: true,
-                  maxLines: 5,
-                  textAlign: TextAlign.justify,
-                ),
               ],
             ),
           ),

@@ -63,25 +63,6 @@ class MarketHorizontalItems extends StatelessWidget {
                           ),
                         ),
                       ),
-
-                      const SizedBox(width: 60),
-
-                      // rating icon
-                      const Icon(
-                        Icons.star,
-                        color: Colors.amber,
-                        size: 13,
-                      ),
-
-                      const SizedBox(width: 5),
-
-                      Text(
-                        "4.3",
-                        style: Theme.of(context)
-                            .textTheme
-                            .headlineSmall!
-                            .copyWith(fontSize: 13),
-                      ),
                     ],
                   ),
 
@@ -130,7 +111,7 @@ class MarketHorizontalItems extends StatelessWidget {
                         padding: EdgeInsets.zero,
                         width: 50,
                         child: Text(
-                          "Terms",
+                          "Status",
                           style: Theme.of(context)
                               .textTheme
                               .headlineSmall!
@@ -142,41 +123,7 @@ class MarketHorizontalItems extends StatelessWidget {
 
                       // subtitle
                       Text(
-                        ":12 Months, Fixed",
-                        style: Theme.of(context)
-                            .textTheme
-                            .headlineSmall!
-                            .copyWith(fontSize: 13, color: Colors.grey),
-                        softWrap: true,
-                        maxLines: 3,
-                      ),
-                    ],
-                  ),
-
-                  const SizedBox(height: CcSizes.spaceBtnItems_2 / 3),
-
-                  // where
-                  Row(
-                    children: [
-                      // title
-                      Container(
-                        color: Colors.transparent,
-                        padding: EdgeInsets.zero,
-                        width: 50,
-                        child: Text(
-                          "Where",
-                          style: Theme.of(context)
-                              .textTheme
-                              .headlineSmall!
-                              .copyWith(fontSize: 13),
-                          softWrap: true,
-                          maxLines: 3,
-                        ),
-                      ),
-
-                      // subtitle
-                      Text(
-                        ":Kurasini, DSM",
+                        ":Available, 100kWh",
                         style: Theme.of(context)
                             .textTheme
                             .headlineSmall!

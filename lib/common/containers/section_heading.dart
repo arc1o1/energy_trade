@@ -38,7 +38,7 @@ class CcSectionHeading extends StatelessWidget {
               onPressed: onPressed,
               child: Text(
                 buttonTitle!,
-                style: TextStyle(fontSize: 14),
+                style: const TextStyle(fontSize: 14),
               )),
       ],
     );

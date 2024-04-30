@@ -1,9 +1,4 @@
 import 'package:energy_trade/common/routes/routes.dart';
-// import 'package:energy_trade/features/personnalization/01_settings/settings.dart';
-// import 'package:energy_trade/features/personnalization/03_wallet/wallet.dart';
-// import 'package:energy_trade/features/shop/01_home/home.dart';
-// import 'package:energy_trade/features/shop/02_cart/cart.dart';
-// import 'package:energy_trade/features/shop/03_reviews/reviews.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -49,13 +44,15 @@ class DrawerList extends StatelessWidget {
                   : Colors.black),
 
           menuItem(
-              "Cart",
-              Icons.shopping_cart_rounded,
+              "Analytics",
+              Icons.analytics_rounded,
               () => navigate(3),
-              Get.currentRoute == CcRoutes.cart
+              Get.currentRoute == CcRoutes.analytics
                   ? Colors.green
                   : Colors.transparent,
-              Get.currentRoute == CcRoutes.cart ? Colors.white : Colors.black),
+              Get.currentRoute == CcRoutes.analytics
+                  ? Colors.white
+                  : Colors.black),
 
           // menuItem(
           //     "Notifications",
@@ -137,7 +134,7 @@ class DrawerList extends StatelessWidget {
     } else if (index == 2) {
       Get.toNamed(CcRoutes.wallet);
     } else if (index == 3) {
-      Get.toNamed(CcRoutes.cart);
+      Get.toNamed(CcRoutes.analytics);
     } else if (index == 4) {
       Get.toNamed(CcRoutes.notifications);
     } else if (index == 5) {

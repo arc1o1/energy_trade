@@ -1,4 +1,4 @@
-import 'package:energy_trade/features/shop/02_cart/cart.dart';
+import 'package:energy_trade/features/shop/06_checkout/checkout.dart';
 import 'package:energy_trade/utils/constants/colors.dart';
 import 'package:energy_trade/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
@@ -28,11 +28,12 @@ class BottomAddToCart extends StatelessWidget {
             Row(
               children: [
                 // minus from cart
-                InkWell(
-                  onTap: () {},
+                Material(
+                  elevation: 5,
+                  borderRadius: BorderRadius.circular(CcSizes.cardRadiusXs),
+                  color: CcColors.grey,
                   child: Container(
                     decoration: const BoxDecoration(
-                      color: CcColors.dark,
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(CcSizes.cardRadiusXs),
                         topRight: Radius.circular(CcSizes.cardRadiusXs),
@@ -44,7 +45,7 @@ class BottomAddToCart extends StatelessWidget {
                       width: CcSizes.iconLg,
                       height: CcSizes.iconLg,
                       child: Center(
-                        child: Icon(Iconsax.minus, color: CcColors.white),
+                        child: Icon(Iconsax.minus, color: CcColors.black),
                       ),
                     ),
                   ),
@@ -52,27 +53,31 @@ class BottomAddToCart extends StatelessWidget {
 
                 // item count
                 const SizedBox(width: CcSizes.spaceBtnItems_1),
-                Text("2", style: Theme.of(context).textTheme.titleSmall),
+                Text("2 kWh", style: Theme.of(context).textTheme.titleSmall),
                 const SizedBox(width: CcSizes.spaceBtnItems_1),
 
                 // add to cart icon
                 InkWell(
                   onTap: () {},
-                  child: Container(
-                    decoration: const BoxDecoration(
-                      color: CcColors.dark,
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(CcSizes.cardRadiusXs),
-                        topRight: Radius.circular(CcSizes.cardRadiusXs),
-                        bottomRight: Radius.circular(CcSizes.cardRadiusXs),
-                        bottomLeft: Radius.circular(CcSizes.cardRadiusXs),
+                  child: Material(
+                    elevation: 5,
+                    color: CcColors.dark,
+                    borderRadius: BorderRadius.circular(CcSizes.cardRadiusXs),
+                    child: Container(
+                      decoration: const BoxDecoration(
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(CcSizes.cardRadiusXs),
+                          topRight: Radius.circular(CcSizes.cardRadiusXs),
+                          bottomRight: Radius.circular(CcSizes.cardRadiusXs),
+                          bottomLeft: Radius.circular(CcSizes.cardRadiusXs),
+                        ),
                       ),
-                    ),
-                    child: const SizedBox(
-                      width: CcSizes.iconLg,
-                      height: CcSizes.iconLg,
-                      child: Center(
-                        child: Icon(Iconsax.add, color: CcColors.white),
+                      child: const SizedBox(
+                        width: CcSizes.iconLg,
+                        height: CcSizes.iconLg,
+                        child: Center(
+                          child: Icon(Iconsax.add, color: CcColors.white),
+                        ),
                       ),
                     ),
                   ),
@@ -81,31 +86,23 @@ class BottomAddToCart extends StatelessWidget {
             ),
 
             // see if an error results in this functional block
-            ElevatedButton(
-              onPressed: () {
-                Get.to(() => const CartScreen());
-              },
-              style: ElevatedButton.styleFrom(
-                  padding: const EdgeInsets.all(CcSizes.md),
-                  backgroundColor: CcColors.black,
-                  side: const BorderSide(color: CcColors.black)),
-              child: Row(
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  // cart icon
-                  const Icon(Icons.shopping_cart_checkout, size: 25),
-
-                  const SizedBox(width: CcSizes.spaceBtnItems_1 / 2),
-
-                  Text(
-                    "cart",
-                    style: Theme.of(context).textTheme.titleSmall!.copyWith(
-                          fontSize: 14,
+            SizedBox(
+              width: 100,
+              child: ElevatedButton(
+                onPressed: () => Get.to(() => const CheckoutScreen()),
+                style: ElevatedButton.styleFrom(
+                    padding: const EdgeInsets.all(CcSizes.md),
+                    backgroundColor: Colors.blue,
+                    side: const BorderSide(color: Colors.blue)),
+                child: Center(
+                  child: Text(
+                    "Buy",
+                    style: Theme.of(context).textTheme.headlineSmall!.copyWith(
                           fontWeight: FontWeight.w600,
                           color: CcColors.white,
                         ),
                   ),
-                ],
+                ),
               ),
             ),
           ],

@@ -1,5 +1,5 @@
+import 'package:energy_trade/common/images/rounded_image.dart';
 import 'package:energy_trade/features/shop/01_home/buying.dart';
-import 'package:energy_trade/features/shop/01_home/widgets/selling_tab.dart';
 import 'package:energy_trade/utils/constants/image_strings.dart';
 import 'package:energy_trade/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
@@ -109,6 +109,57 @@ class BuyingTab extends StatelessWidget {
             //   ),
             // ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class EnergyClassificationMaterialWidget extends StatelessWidget {
+  const EnergyClassificationMaterialWidget({
+    super.key,
+    required this.categoryText,
+    required this.image,
+    this.onTap,
+  });
+
+  final String image;
+  final String categoryText;
+  final Function()? onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: onTap,
+      child: Material(
+        elevation: 5,
+        color: Colors.grey.shade200,
+        borderRadius: BorderRadius.circular(10),
+        child: Container(
+          padding: const EdgeInsets.all(20),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              // image
+              CcRoundedImage(
+                imageUrl: image,
+                backgroundColor: Colors.transparent,
+                width: 100,
+                height: 100,
+              ),
+
+              const SizedBox(height: CcSizes.spaceBtnItems_1),
+
+              // text description
+              Text(
+                categoryText,
+                style: Theme.of(context).textTheme.headlineSmall!.copyWith(
+                      color: Colors.black,
+                      fontSize: 18,
+                    ),
+              )
+            ],
+          ),
         ),
       ),
     );

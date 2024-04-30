@@ -2,7 +2,7 @@ import 'package:energy_trade/common/routes/routes.dart';
 import 'package:energy_trade/features/personnalization/01_settings/settings.dart';
 import 'package:energy_trade/features/personnalization/03_wallet/wallet.dart';
 import 'package:energy_trade/features/shop/01_home/home.dart';
-import 'package:energy_trade/features/shop/02_cart/cart.dart';
+import 'package:energy_trade/features/shop/02_analytics/analytics.dart';
 import 'package:energy_trade/features/shop/03_reviews/reviews.dart';
 import 'package:get/get.dart';
 
@@ -11,7 +11,7 @@ class AppRoutes {
     // client pages
 
     GetPage(name: CcRoutes.home, page: () => const HomeScreen()),
-    GetPage(name: CcRoutes.cart, page: () => const CartScreen()),
+    GetPage(name: CcRoutes.analytics, page: () => const AnalyticsScreen()),
     GetPage(name: CcRoutes.settings, page: () => const SettingsScreen()),
     GetPage(name: CcRoutes.wallet, page: () => const WalletScreen()),
     GetPage(name: CcRoutes.reviews, page: () => const ReviewScreen()),

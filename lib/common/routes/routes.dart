@@ -12,7 +12,7 @@ class CcRoutes {
   static const wallet = '/wallet';
   static const orderDetail = '/order-detail';
   static const checkout = '/checkout';
-  static const cart = '/cart';
+  static const analytics = '/analytics';
   static const allProducts = '/all-products';
   static const userProfile = '/user-profile';
   static const signup = '/signup';

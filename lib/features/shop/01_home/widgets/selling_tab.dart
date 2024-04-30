@@ -1,9 +1,7 @@
-import 'package:energy_trade/common/images/rounded_image.dart';
-import 'package:energy_trade/features/shop/01_home/selling.dart';
-import 'package:energy_trade/utils/constants/image_strings.dart';
+import 'package:energy_trade/features/shop/02_analytics/widgets/analytics_summary.dart';
 import 'package:energy_trade/utils/constants/sizes.dart';
+import 'package:energy_trade/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class SellingTab extends StatelessWidget {
   const SellingTab({
@@ -12,87 +10,112 @@ class SellingTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // var
+    var categories = [
+      "Yes",
+      "No",
+    ];
+
+    var eCategories = [
+      "Solar",
+      "Battery",
+      "Wind",
+      "Geothermal",
+      "Coal",
+      "charcoal",
+    ];
+
+    // scrollview
     return SingleChildScrollView(
       child: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Column(
-                  children: [
-                    // title
-                    Text(
-                      "Selling Clean Energy",
-                      style:
-                          Theme.of(context).textTheme.headlineSmall!.copyWith(
-                                color: const Color(0xFF0D98BA),
-                                fontSize: 20,
-                              ),
-                    ),
+            const AnalyticsSummary(),
 
-                    const SizedBox(height: CcSizes.spaceBtnItems_1),
+            const SizedBox(height: CcSizes.spaceBtnItems_1),
 
-                    // subtitle
-                    Text(
-                      "Kindly Choose Energy Type That You Want To Sell!",
-                      style:
-                          Theme.of(context).textTheme.headlineSmall!.copyWith(
-                                color: Colors.black,
-                                fontSize: 17,
-                              ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
+            // divider
+            const Divider(color: Colors.black26),
 
-            const SizedBox(height: CcSizes.spaceBtnItems_1 * 2),
+            const SizedBox(height: CcSizes.spaceBtnItems_1),
 
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                // solar energy category
-                EnergyClassificationMaterialWidget(
-                  image: CcImages.solar,
-                  categoryText: "Solar",
-                  onTap: () => Get.to(
-                    () => const SellingScreen(title: "Solar"),
+                Expanded(
+                  flex: 3,
+                  child: Text(
+                    "Automatically sell excess energy production",
+                    style: Theme.of(context)
+                        .textTheme
+                        .headlineSmall!
+                        .copyWith(fontSize: 16),
                   ),
                 ),
 
-                // geothermal energy category
-                EnergyClassificationMaterialWidget(
-                  image: CcImages.geo,
-                  categoryText: "Geothermal",
-                  onTap: () => Get.to(
-                    () => const SellingScreen(title: "Geothermal"),
+                // filter box
+                Expanded(
+                  flex: 2,
+                  child: SizedBox(
+                    width: 100,
+                    height: 40,
+                    child: DropdownButtonFormField(
+                      items: categories.map((category) {
+                        return DropdownMenuItem(
+                            value: category, child: Text(category));
+                      }).toList(),
+                      onChanged: (value) {},
+                      decoration: InputDecoration(
+                          filled: true,
+                          fillColor: Colors.transparent,
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: const BorderSide(color: Colors.grey),
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                          hintText: "No"),
+                    ),
                   ),
                 ),
+
+                const SizedBox(),
               ],
             ),
 
-            const SizedBox(height: CcSizes.spaceBtnItems_1 * 2),
+            const SizedBox(height: CcSizes.spaceBtnItems_1),
 
+            // amount to be sold
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                // battery power
-                EnergyClassificationMaterialWidget(
-                  image: CcImages.battery,
-                  categoryText: "Battery",
-                  onTap: () => Get.to(
-                    () => const SellingScreen(title: "Battery"),
+                Expanded(
+                  flex: 3,
+                  child: Text(
+                    "Energy amount to be sold",
+                    style: Theme.of(context)
+                        .textTheme
+                        .headlineSmall!
+                        .copyWith(fontSize: 16),
                   ),
                 ),
-
-                // wind power
-                EnergyClassificationMaterialWidget(
-                  image: CcImages.wind,
-                  categoryText: "Wind",
-                  onTap: () => Get.to(
-                    () => const SellingScreen(title: "Wind"),
+                Expanded(
+                  flex: 2,
+                  child: SizedBox(
+                    height: 40,
+                    width: 100,
+                    child: TextFormField(
+                      decoration: InputDecoration(
+                        hintText: 'eg. 200 kWh',
+                        labelStyle: Theme.of(context)
+                            .textTheme
+                            .bodyMedium!
+                            .copyWith(fontWeight: FontWeight.w600),
+                        hintStyle: Theme.of(context)
+                            .textTheme
+                            .headlineSmall!
+                            .copyWith(color: Colors.black, fontSize: 13),
+                      ),
+                    ),
                   ),
                 ),
               ],
@@ -100,66 +123,139 @@ class SellingTab extends StatelessWidget {
 
             const SizedBox(height: CcSizes.spaceBtnItems_1),
 
-            // // others
-            // EnergyClassificationMaterialWidget(
-            //   image: CcImages.other1,
-            //   categoryText: "Others",
-            //   onTap: () => Get.to(
-            //     () => const SellingScreen(title: "Others"),
-            //   ),
-            // ),
-          ],
-        ),
-      ),
-    );
-  }
-}
+            // selling at market value
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Expanded(
+                  flex: 3,
+                  child: Text(
+                    "Automatically sell excess energy production",
+                    style: Theme.of(context)
+                        .textTheme
+                        .headlineSmall!
+                        .copyWith(fontSize: 16),
+                  ),
+                ),
 
-class EnergyClassificationMaterialWidget extends StatelessWidget {
-  const EnergyClassificationMaterialWidget({
-    super.key,
-    required this.categoryText,
-    required this.image,
-    this.onTap,
-  });
-
-  final String image;
-  final String categoryText;
-  final Function()? onTap;
-
-  @override
-  Widget build(BuildContext context) {
-    return InkWell(
-      onTap: onTap,
-      child: Material(
-        elevation: 5,
-        color: Colors.grey.shade200,
-        borderRadius: BorderRadius.circular(10),
-        child: Container(
-          padding: const EdgeInsets.all(20),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              // image
-              CcRoundedImage(
-                imageUrl: image,
-                backgroundColor: Colors.transparent,
-                width: 100,
-                height: 100,
-              ),
-
-              const SizedBox(height: CcSizes.spaceBtnItems_1),
-
-              // text description
-              Text(
-                categoryText,
-                style: Theme.of(context).textTheme.headlineSmall!.copyWith(
-                      color: Colors.black,
-                      fontSize: 18,
+                // filter box
+                Expanded(
+                  flex: 2,
+                  child: SizedBox(
+                    width: 100,
+                    height: 40,
+                    child: DropdownButtonFormField(
+                      items: categories.map((category) {
+                        return DropdownMenuItem(
+                            value: category, child: Text(category));
+                      }).toList(),
+                      onChanged: (value) {},
+                      decoration: InputDecoration(
+                          filled: true,
+                          fillColor: Colors.transparent,
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: const BorderSide(color: Colors.grey),
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                          hintText: "No"),
                     ),
-              )
-            ],
-          ),
+                  ),
+                ),
+              ],
+            ),
+
+            const SizedBox(height: CcSizes.spaceBtnItems_1),
+
+            // start selling price
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Expanded(
+                  flex: 3,
+                  child: Text(
+                    "At what value do you want to sell your energy",
+                    style: Theme.of(context)
+                        .textTheme
+                        .headlineSmall!
+                        .copyWith(fontSize: 16),
+                  ),
+                ),
+                Expanded(
+                  flex: 2,
+                  child: SizedBox(
+                    height: 40,
+                    width: 100,
+                    child: TextFormField(
+                      decoration: InputDecoration(
+                        hintText: 'eg. 200 kWh',
+                        labelStyle: Theme.of(context)
+                            .textTheme
+                            .bodyMedium!
+                            .copyWith(fontWeight: FontWeight.w600),
+                        hintStyle: Theme.of(context)
+                            .textTheme
+                            .headlineSmall!
+                            .copyWith(color: Colors.black, fontSize: 13),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+
+            const SizedBox(height: CcSizes.spaceBtnItems_1),
+
+            // energy type
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Expanded(
+                  flex: 3,
+                  child: Text(
+                    "Energy Type",
+                    style: Theme.of(context)
+                        .textTheme
+                        .headlineSmall!
+                        .copyWith(fontSize: 16),
+                  ),
+                ),
+
+                // filter box
+                Expanded(
+                  flex: 2,
+                  child: SizedBox(
+                    width: 100,
+                    height: 40,
+                    child: DropdownButtonFormField(
+                      items: eCategories.map((category) {
+                        return DropdownMenuItem(
+                            value: category, child: Text(category));
+                      }).toList(),
+                      onChanged: (value) {},
+                      decoration: InputDecoration(
+                          filled: true,
+                          fillColor: Colors.transparent,
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: const BorderSide(color: Colors.grey),
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                          hintText: "Solar"),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+
+            const SizedBox(height: CcSizes.spaceBtnItems_1 * 2),
+
+            SizedBox(
+              width: CcHelperFunctions.screenWidth() / 2,
+              child: ElevatedButton(
+                onPressed: () {},
+                child: const Text("Sell"),
+              ),
+            ),
+          ],
         ),
       ),
     );
