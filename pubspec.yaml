@@ -80,7 +80,8 @@ flutter:
   #   - assets/images/banners/
     - assets/images/user/
     - assets/images/energies/
-  #   - assets/images/products/
+    - assets/images/companies/
+    - assets/images/cards/
     - assets/brands/
   #   - assets/icons/categories/
   #   - assets/images/success_screen/

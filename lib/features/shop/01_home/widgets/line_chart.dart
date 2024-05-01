@@ -86,15 +86,15 @@ class LineChartSample2 extends StatelessWidget {
 
   LineChartData mainData() {
     return LineChartData(
-      gridData: FlGridData(
+      gridData: const FlGridData(
         show: false,
       ),
       titlesData: FlTitlesData(
         show: true,
-        rightTitles: AxisTitles(
+        rightTitles: const AxisTitles(
           sideTitles: SideTitles(showTitles: false),
         ),
-        topTitles: AxisTitles(
+        topTitles: const AxisTitles(
           sideTitles: SideTitles(showTitles: false),
         ),
         bottomTitles: AxisTitles(
@@ -130,7 +130,7 @@ class LineChartSample2 extends StatelessWidget {
           color: Colors.white,
           barWidth: 2,
           isStrokeCapRound: true,
-          dotData: FlDotData(
+          dotData: const FlDotData(
             show: false,
           ),
           belowBarData: BarAreaData(
@@ -437,7 +437,7 @@ final data = [
 ].asMap();
 
 
-// implementation
+//
 // SizedBox(
 //         height: 200,
 //         width: 200,

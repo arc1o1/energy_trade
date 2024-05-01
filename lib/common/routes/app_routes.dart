@@ -1,9 +1,9 @@
 import 'package:energy_trade/common/routes/routes.dart';
 import 'package:energy_trade/features/personnalization/01_settings/settings.dart';
 import 'package:energy_trade/features/personnalization/03_wallet/wallet.dart';
+import 'package:energy_trade/features/personnalization/04_history/history.dart';
 import 'package:energy_trade/features/shop/01_home/home.dart';
 import 'package:energy_trade/features/shop/02_analytics/analytics.dart';
-import 'package:energy_trade/features/shop/03_reviews/reviews.dart';
 import 'package:get/get.dart';
 
 class AppRoutes {
@@ -14,7 +14,7 @@ class AppRoutes {
     GetPage(name: CcRoutes.analytics, page: () => const AnalyticsScreen()),
     GetPage(name: CcRoutes.settings, page: () => const SettingsScreen()),
     GetPage(name: CcRoutes.wallet, page: () => const WalletScreen()),
-    GetPage(name: CcRoutes.reviews, page: () => const ReviewScreen()),
+    GetPage(name: CcRoutes.history, page: () => const HistoryScreen()),
     // GetPage(name: CcRoutes.order, page: () => const OrderScreen()),
     // GetPage(name: CcRoutes.orderDetail, page: () => const OrderDetailsScreen()),
     // GetPage(name: CcRoutes.checkout, page: () => const CheckoutScreen()),

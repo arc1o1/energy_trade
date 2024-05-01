@@ -7,7 +7,7 @@ class CcRoutes {
   static const settings = '/settings';
   static const notifications = '/notifications';
   static const search = '/search';
-  static const reviews = '/reviews';
+  static const history = '/history';
   static const productDetail = '/product-detail';
   static const wallet = '/wallet';
   static const orderDetail = '/order-detail';

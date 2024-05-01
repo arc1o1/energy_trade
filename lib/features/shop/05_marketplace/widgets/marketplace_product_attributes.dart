@@ -37,7 +37,7 @@ class MarketplaceProductAttributes extends StatelessWidget {
                           children: [
                             // seller name
                             const CcProductTitleText(
-                                title: "name\t\t\t : ", smallSize: true),
+                                title: "name\t\t\t   : ", smallSize: true),
                             const SizedBox(width: CcSizes.spaceBtnItems_1 + 10),
                             Text(
                               "HE Power Solution",
@@ -46,7 +46,7 @@ class MarketplaceProductAttributes extends StatelessWidget {
                                   .titleSmall!
                                   .copyWith(
                                       fontWeight: FontWeight.w600,
-                                      color: const Color(0xFF0D98BA)),
+                                      color: Colors.blue),
                             ),
                           ],
                         ),
@@ -58,7 +58,7 @@ class MarketplaceProductAttributes extends StatelessWidget {
                           children: [
                             const CcProductTitleText(
                                 title: "location :", smallSize: true),
-                            const SizedBox(width: CcSizes.spaceBtnItems_1 + 6),
+                            const SizedBox(width: CcSizes.spaceBtnItems_1 + 10),
                             Text(
                               "DSM",
                               style: Theme.of(context)
@@ -66,7 +66,7 @@ class MarketplaceProductAttributes extends StatelessWidget {
                                   .titleSmall!
                                   .copyWith(
                                       fontWeight: FontWeight.w600,
-                                      color: const Color(0xFF0D98BA)),
+                                      color: Colors.blue),
                             ),
                           ],
                         ),
@@ -93,16 +93,16 @@ class MarketplaceProductAttributes extends StatelessWidget {
                         Row(
                           children: [
                             const CcProductTitleText(
-                                title: "price\t\t\t : ", smallSize: true),
+                                title: "price\t\t\t     : ", smallSize: true),
 
-                            const SizedBox(width: CcSizes.spaceBtnItems_1 + 10),
+                            const SizedBox(width: CcSizes.spaceBtnItems_1 + 6),
 
                             // sale price
                             Row(
                               children: [
                                 const CcProductPriceText(
                                   price: "3000",
-                                  color: Color(0xFF0D98BA),
+                                  color: Colors.blue,
                                 ),
                                 Text(
                                   " per kWh",
@@ -110,8 +110,7 @@ class MarketplaceProductAttributes extends StatelessWidget {
                                       .textTheme
                                       .headlineSmall!
                                       .copyWith(
-                                          fontSize: 15,
-                                          color: const Color(0xFF0D98BA)),
+                                          fontSize: 15, color: Colors.blue),
                                   softWrap: true,
                                   maxLines: 3,
                                 ),
@@ -126,8 +125,8 @@ class MarketplaceProductAttributes extends StatelessWidget {
                         Row(
                           children: [
                             const CcProductTitleText(
-                                title: "status : ", smallSize: true),
-                            const SizedBox(width: CcSizes.spaceBtnItems_1 + 10),
+                                title: "status\t    : ", smallSize: true),
+                            const SizedBox(width: CcSizes.spaceBtnItems_1 + 8),
                             Text(
                               "Available",
                               style: Theme.of(context)
@@ -135,7 +134,7 @@ class MarketplaceProductAttributes extends StatelessWidget {
                                   .titleSmall!
                                   .copyWith(
                                       fontWeight: FontWeight.w600,
-                                      color: const Color(0xFF0D98BA)),
+                                      color: Colors.blue),
                             ),
                           ],
                         ),
@@ -147,15 +146,77 @@ class MarketplaceProductAttributes extends StatelessWidget {
                           children: [
                             const CcProductTitleText(
                                 title: "quantity : ", smallSize: true),
-                            const SizedBox(width: CcSizes.spaceBtnItems_1),
+                            const SizedBox(width: CcSizes.spaceBtnItems_1 + 8),
                             Text(
-                              "100kWh",
+                              "100 kWh",
                               style: Theme.of(context)
                                   .textTheme
                                   .titleSmall!
                                   .copyWith(
                                       fontWeight: FontWeight.w600,
-                                      color: const Color(0xFF0D98BA)),
+                                      color: Colors.blue),
+                            ),
+                          ],
+                        ),
+
+                        const SizedBox(height: 10),
+                      ],
+                    ),
+                  ],
+                ),
+
+                const Divider(),
+
+                // title, price and stock status
+                Row(
+                  children: [
+                    const CcSectionHeading(
+                        title: "Other     ", showActionButton: false),
+                    const SizedBox(width: CcSizes.spaceBtnItems_1),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: [
+                            const CcProductTitleText(
+                                title: "delivery : ", smallSize: true),
+
+                            const SizedBox(width: CcSizes.spaceBtnItems_1 + 3),
+
+                            // sale price
+                            Row(
+                              children: [
+                                Text(
+                                  "   7 days",
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .headlineSmall!
+                                      .copyWith(
+                                          fontSize: 15, color: Colors.blue),
+                                  softWrap: true,
+                                  maxLines: 3,
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+
+                        const SizedBox(height: 10),
+
+                        // status: may be "available with no of plates or products" or "out of order"
+                        Row(
+                          children: [
+                            const CcProductTitleText(
+                                title: "billing    : ", smallSize: true),
+                            const SizedBox(width: CcSizes.spaceBtnItems_1 + 10),
+                            Text(
+                              " Monthly",
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .titleSmall!
+                                  .copyWith(
+                                      fontWeight: FontWeight.w600,
+                                      color: Colors.blue),
                             ),
                           ],
                         ),
@@ -166,7 +227,7 @@ class MarketplaceProductAttributes extends StatelessWidget {
                         Row(
                           children: [
                             const CcProductTitleText(
-                                title: "terms : ", smallSize: true),
+                                title: "terms     : ", smallSize: true),
                             const SizedBox(width: CcSizes.spaceBtnItems_1 + 12),
                             Text(
                               "Max 20 kWh per buyer",
@@ -175,7 +236,7 @@ class MarketplaceProductAttributes extends StatelessWidget {
                                   .titleSmall!
                                   .copyWith(
                                       fontWeight: FontWeight.w600,
-                                      color: const Color(0xFF0D98BA)),
+                                      color: Colors.blue),
                             ),
                           ],
                         ),
@@ -191,24 +252,6 @@ class MarketplaceProductAttributes extends StatelessWidget {
         ),
 
         // const SizedBox(height: CcSizes.spaceBtnItems_1),
-
-        // attributes
-        // Column(
-        //   crossAxisAlignment: CrossAxisAlignment.center,
-        //   children: [
-        //     Wrap(
-        //       spacing: 10,
-        //       children: [
-        //         CcChoiceChip(
-        //             text: "Normal", selected: false, onSelected: (value) {}),
-        //         CcChoiceChip(
-        //             text: "Combo", selected: true, onSelected: (value) {}),
-        //         CcChoiceChip(
-        //             text: "Super", selected: false, onSelected: (value) {}),
-        //       ],
-        //     )
-        //   ],
-        // )
       ],
     );
   }

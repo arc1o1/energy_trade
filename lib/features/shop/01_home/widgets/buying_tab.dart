@@ -1,4 +1,4 @@
-import 'package:energy_trade/common/images/rounded_image.dart';
+import 'package:energy_trade/common/images/circular_image.dart';
 import 'package:energy_trade/features/shop/01_home/buying.dart';
 import 'package:energy_trade/utils/constants/image_strings.dart';
 import 'package:energy_trade/utils/constants/sizes.dart';
@@ -27,7 +27,6 @@ class BuyingTab extends StatelessWidget {
                       "Buying Clean Energy",
                       style:
                           Theme.of(context).textTheme.headlineSmall!.copyWith(
-                                color: const Color(0xFF0D98BA),
                                 fontSize: 20,
                               ),
                     ),
@@ -47,67 +46,69 @@ class BuyingTab extends StatelessWidget {
                 ),
               ],
             ),
-
             const SizedBox(height: CcSizes.spaceBtnItems_1 * 2),
-
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 // solar energy category
-                EnergyClassificationMaterialWidget(
-                  image: CcImages.solar,
-                  categoryText: "Solar",
-                  onTap: () => Get.to(
-                    () => const BuyingScreen(title: "Solar"),
+                Expanded(
+                  flex: 4,
+                  child: EnergyClassificationMaterialWidget(
+                    image: CcImages.solar,
+                    categoryText: "Solar",
+                    onTap: () => Get.to(
+                      () => const BuyingScreen(title: "Solar"),
+                    ),
                   ),
                 ),
 
+                const SizedBox(width: 5),
+
                 // geothermal energy category
-                EnergyClassificationMaterialWidget(
-                  image: CcImages.geo,
-                  categoryText: "Geothermal",
-                  onTap: () => Get.to(
-                    () => const BuyingScreen(title: "Geothermal"),
+                Expanded(
+                  flex: 5,
+                  child: EnergyClassificationMaterialWidget(
+                    image: CcImages.geo,
+                    categoryText: "Geothermal",
+                    onTap: () => Get.to(
+                      () => const BuyingScreen(title: "Geothermal"),
+                    ),
                   ),
                 ),
               ],
             ),
-
-            const SizedBox(height: CcSizes.spaceBtnItems_1 * 2),
-
+            const SizedBox(height: CcSizes.spaceBtnItems_1),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 // battery power
-                EnergyClassificationMaterialWidget(
-                  image: CcImages.battery,
-                  categoryText: "Battery",
-                  onTap: () => Get.to(
-                    () => const BuyingScreen(title: "Battery"),
+                Expanded(
+                  flex: 5,
+                  child: EnergyClassificationMaterialWidget(
+                    image: CcImages.battery,
+                    categoryText: "Battery",
+                    onTap: () => Get.to(
+                      () => const BuyingScreen(title: "Battery"),
+                    ),
                   ),
                 ),
 
+                const SizedBox(width: 5),
+
                 // wind power
-                EnergyClassificationMaterialWidget(
-                  image: CcImages.wind,
-                  categoryText: "Wind",
-                  onTap: () => Get.to(
-                    () => const BuyingScreen(title: "Wind"),
+                Expanded(
+                  flex: 4,
+                  child: EnergyClassificationMaterialWidget(
+                    image: CcImages.wind,
+                    categoryText: "Wind",
+                    onTap: () => Get.to(
+                      () => const BuyingScreen(title: "Wind"),
+                    ),
                   ),
                 ),
               ],
             ),
-
-            const SizedBox(height: CcSizes.spaceBtnItems_1),
-
-            // // others
-            // EnergyClassificationMaterialWidget(
-            //   image: CcImages.other1,
-            //   categoryText: "Others",
-            //   onTap: () => Get.to(
-            //     () => BuyingScreen(title: "Others"),
-            //   ),
-            // ),
+            const SizedBox(height: CcSizes.spaceBtnItems_1 * 2),
           ],
         ),
       ),
@@ -136,19 +137,21 @@ class EnergyClassificationMaterialWidget extends StatelessWidget {
         color: Colors.grey.shade200,
         borderRadius: BorderRadius.circular(10),
         child: Container(
+          height: 90,
           padding: const EdgeInsets.all(20),
-          child: Column(
+          child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               // image
-              CcRoundedImage(
-                imageUrl: image,
-                backgroundColor: Colors.transparent,
-                width: 100,
-                height: 100,
+              CcCircularImage(
+                image: image,
+                backgroundColor: Colors.green,
+                width: 50,
+                height: 50,
+                borderRadius: 100,
               ),
 
-              const SizedBox(height: CcSizes.spaceBtnItems_1),
+              const SizedBox(width: CcSizes.spaceBtnItems_1 / 2),
 
               // text description
               Text(

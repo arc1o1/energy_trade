@@ -1,7 +1,6 @@
 import 'package:energy_trade/common/appbar/tabbar.dart';
 import 'package:energy_trade/common/drawer/drawer.dart';
 import 'package:energy_trade/features/shop/02_analytics/widgets/analytics_summary.dart';
-import 'package:energy_trade/features/shop/02_analytics/widgets/consumer_tab.dart';
 import 'package:energy_trade/features/shop/02_analytics/widgets/energy_production_tab.dart';
 import 'package:energy_trade/features/shop/02_analytics/widgets/income_tab.dart';
 import 'package:energy_trade/utils/constants/colors.dart';
@@ -19,12 +18,11 @@ class AnalyticsScreen extends StatelessWidget {
     var categories = [
       "Energy Production",
       "Income",
-      "Consumers",
     ];
 
     // scaffold
     return DefaultTabController(
-      length: 3,
+      length: 2,
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: CcColors.primary,
@@ -91,7 +89,6 @@ class AnalyticsScreen extends StatelessWidget {
             children: [
               EnergyProductionTab(),
               IncomeTab(),
-              ConsumerTab(),
             ],
           ),
         ),

@@ -66,13 +66,13 @@ class DrawerList extends StatelessWidget {
           //         : Colors.black),
 
           menuItem(
-              "Reviews",
+              "History",
               Icons.reviews,
               () => navigate(5),
-              Get.currentRoute == CcRoutes.reviews
+              Get.currentRoute == CcRoutes.history
                   ? Colors.green
                   : Colors.transparent,
-              Get.currentRoute == CcRoutes.reviews
+              Get.currentRoute == CcRoutes.history
                   ? Colors.white
                   : Colors.black),
 
@@ -138,7 +138,7 @@ class DrawerList extends StatelessWidget {
     } else if (index == 4) {
       Get.toNamed(CcRoutes.notifications);
     } else if (index == 5) {
-      Get.toNamed(CcRoutes.reviews);
+      Get.toNamed(CcRoutes.history);
     } else if (index == 6) {
       Get.toNamed(CcRoutes.settings);
     }

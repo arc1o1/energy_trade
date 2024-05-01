@@ -38,4 +38,13 @@ class CcImages {
   static const String other1 = "assets/images/energies/other.jpeg";
 
   static const String company1 = "assets/images/energies/company_image.png";
+
+  // companies
+  static const String bitcoin = "assets/images/companies/bitcoin!.png";
+  static const String bitcoin1 = "assets/images/companies/bitcoin.png";
+  static const String ethereum = "assets/images/companies/ethereum.png";
+  static const String bnb = "assets/images/companies/bnb.png";
+
+  static const String mastercad = "assets/images/cards/mastercard.png";
+  static const String visa = "assets/images/cards/visa.png";
 }

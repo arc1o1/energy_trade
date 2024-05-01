@@ -4,6 +4,7 @@ import 'package:energy_trade/common/list_tile/user_profile_tile.dart';
 import 'package:energy_trade/common/texts/section_heading.dart';
 import 'package:energy_trade/features/personnalization/02_profile/profile.dart';
 import 'package:energy_trade/features/personnalization/03_wallet/wallet.dart';
+import 'package:energy_trade/features/personnalization/04_history/history.dart';
 import 'package:energy_trade/features/shop/02_analytics/analytics.dart';
 import 'package:energy_trade/utils/constants/colors.dart';
 import 'package:energy_trade/utils/constants/sizes.dart';
@@ -85,8 +86,8 @@ class SettingsScreen extends StatelessWidget {
                     ),
                     CcSettingsMenuTile(
                       icon: Icons.history_outlined,
-                      title: 'Payment History',
-                      onTap: () {},
+                      title: 'History',
+                      onTap: () => Get.to(() => const HistoryScreen()),
                     ),
 
                     const SizedBox(height: CcSizes.spaceBtnSections),
