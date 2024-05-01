@@ -84,45 +84,6 @@ class SellingTab extends StatelessWidget {
 
             const SizedBox(height: CcSizes.spaceBtnItems_1),
 
-            // amount to be sold
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Expanded(
-                  flex: 3,
-                  child: Text(
-                    "Energy amount to be sold",
-                    style: Theme.of(context)
-                        .textTheme
-                        .headlineSmall!
-                        .copyWith(fontSize: 16),
-                  ),
-                ),
-                Expanded(
-                  flex: 2,
-                  child: SizedBox(
-                    height: 40,
-                    width: 100,
-                    child: TextFormField(
-                      decoration: InputDecoration(
-                        hintText: 'eg. 200 kWh',
-                        labelStyle: Theme.of(context)
-                            .textTheme
-                            .bodyMedium!
-                            .copyWith(fontWeight: FontWeight.w600),
-                        hintStyle: Theme.of(context)
-                            .textTheme
-                            .headlineSmall!
-                            .copyWith(color: Colors.black, fontSize: 13),
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-
-            const SizedBox(height: CcSizes.spaceBtnItems_1),
-
             // selling at market value
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -166,6 +127,50 @@ class SellingTab extends StatelessWidget {
 
             const SizedBox(height: CcSizes.spaceBtnItems_1),
 
+            // divider
+            const Divider(color: Colors.black26),
+
+            const SizedBox(height: CcSizes.spaceBtnItems_1),
+
+            // amount to be sold
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Expanded(
+                  flex: 3,
+                  child: Text(
+                    "Energy amount to be sold",
+                    style: Theme.of(context)
+                        .textTheme
+                        .headlineSmall!
+                        .copyWith(fontSize: 16),
+                  ),
+                ),
+                Expanded(
+                  flex: 2,
+                  child: SizedBox(
+                    height: 40,
+                    width: 100,
+                    child: TextFormField(
+                      decoration: InputDecoration(
+                        hintText: 'eg. 200 kWh',
+                        labelStyle: Theme.of(context)
+                            .textTheme
+                            .bodyMedium!
+                            .copyWith(fontWeight: FontWeight.w600),
+                        hintStyle: Theme.of(context)
+                            .textTheme
+                            .headlineSmall!
+                            .copyWith(color: Colors.black, fontSize: 13),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+
+            const SizedBox(height: CcSizes.spaceBtnItems_1),
+
             // start selling price
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -187,7 +192,7 @@ class SellingTab extends StatelessWidget {
                     width: 100,
                     child: TextFormField(
                       decoration: InputDecoration(
-                        hintText: 'eg. 200 kWh',
+                        hintText: 'max 5000/= Tshs',
                         labelStyle: Theme.of(context)
                             .textTheme
                             .bodyMedium!
