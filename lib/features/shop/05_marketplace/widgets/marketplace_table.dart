@@ -10,7 +10,7 @@ class MarketplaceTable extends StatelessWidget {
     return DataTable(
       columnSpacing: 20,
       // border: TableBorder(borderRadius: BorderRadius.circular(10)),
-      headingRowColor: MaterialStateProperty.resolveWith(
+      headingRowColor: WidgetStateProperty.resolveWith(
           (states) => Colors.grey.withOpacity(0.2)),
 
       // columns
@@ -52,7 +52,7 @@ class MarketplaceTable extends StatelessWidget {
       // rows
       rows: [
         DataRow(
-          color: MaterialStateProperty.resolveWith(
+          color: WidgetStateProperty.resolveWith(
               (states) => Colors.grey.shade200),
           cells: [
             DataCell(
@@ -105,7 +105,7 @@ class MarketplaceTable extends StatelessWidget {
 
         // second row
         DataRow(
-          color: MaterialStateProperty.resolveWith(
+          color: WidgetStateProperty.resolveWith(
               (states) => Colors.grey.shade200),
           cells: [
             DataCell(
@@ -158,7 +158,7 @@ class MarketplaceTable extends StatelessWidget {
 
         // third row
         DataRow(
-          color: MaterialStateProperty.resolveWith(
+          color: WidgetStateProperty.resolveWith(
               (states) => Colors.grey.shade200),
           cells: [
             DataCell(
@@ -211,7 +211,7 @@ class MarketplaceTable extends StatelessWidget {
 
         // fourth row
         DataRow(
-          color: MaterialStateProperty.resolveWith(
+          color: WidgetStateProperty.resolveWith(
               (states) => Colors.grey.shade200),
           cells: [
             DataCell(

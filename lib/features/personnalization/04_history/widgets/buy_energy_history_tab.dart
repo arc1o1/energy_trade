@@ -245,7 +245,7 @@ class BuyEnergyHistory extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             child: DataTable(
               headingRowColor:
-                  MaterialStateProperty.all(Colors.grey.withOpacity(0.3)),
+                  WidgetStateProperty.all(Colors.grey.withOpacity(0.3)),
 
               columnSpacing: 25,
 
@@ -326,7 +326,7 @@ class BuyEnergyHistory extends StatelessWidget {
               rows: [
                 for (int i = 0; i < 10; i++)
                   DataRow(
-                    color: MaterialStateProperty.resolveWith(
+                    color: WidgetStateProperty.resolveWith(
                         (states) => Colors.grey.shade200),
                     cells: [
                       DataCell(
