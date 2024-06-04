@@ -1,4 +1,0 @@
-#Wed May 01 21:15:10 AST 2024
-base.0=/home/techsphere/Downloads/personal_projects_&_issues/04_flutter_projects/energy_trade/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
-path.0=classes.dex
-renamed.0=classes.dex
