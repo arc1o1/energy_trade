@@ -1,8 +1,8 @@
 import 'package:energy_trade/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 
-class AnalyticsSummary extends StatelessWidget {
-  const AnalyticsSummary({
+class SellingAnalyticsSummary extends StatelessWidget {
+  const SellingAnalyticsSummary({
     super.key,
   });
 
@@ -41,22 +41,22 @@ class AnalyticsSummary extends StatelessWidget {
                     Text(
                       "900 kWh",
                       style:
-                          Theme.of(context).textTheme.headlineSmall!.copyWith(
-                                color: Colors.white,
-                                fontSize: 23,
-                              ),
+                      Theme.of(context).textTheme.headlineSmall!.copyWith(
+                        color: Colors.white,
+                        fontSize: 23,
+                      ),
                     ),
 
                     const SizedBox(height: CcSizes.spaceBtnItems_1 / 3),
 
                     // sub
                     Text(
-                      "Purchased Energy",
+                      "Produced Energy",
                       style:
-                          Theme.of(context).textTheme.headlineSmall!.copyWith(
-                                color: Colors.yellowAccent,
-                                fontSize: 15,
-                              ),
+                      Theme.of(context).textTheme.headlineSmall!.copyWith(
+                        color: Colors.yellowAccent,
+                        fontSize: 15,
+                      ),
                     ),
                   ],
                 ),
@@ -67,10 +67,10 @@ class AnalyticsSummary extends StatelessWidget {
                     Text(
                       "800 kWh",
                       style:
-                          Theme.of(context).textTheme.headlineSmall!.copyWith(
-                                color: Colors.white,
-                                fontSize: 23,
-                              ),
+                      Theme.of(context).textTheme.headlineSmall!.copyWith(
+                        color: Colors.white,
+                        fontSize: 23,
+                      ),
                     ),
 
                     const SizedBox(height: CcSizes.spaceBtnItems_1 / 3),
@@ -79,10 +79,10 @@ class AnalyticsSummary extends StatelessWidget {
                     Text(
                       "Available Energy",
                       style:
-                          Theme.of(context).textTheme.headlineSmall!.copyWith(
-                                color: Colors.yellowAccent,
-                                fontSize: 15,
-                              ),
+                      Theme.of(context).textTheme.headlineSmall!.copyWith(
+                        color: Colors.yellowAccent,
+                        fontSize: 15,
+                      ),
                     ),
                   ],
                 ),
@@ -100,49 +100,49 @@ class AnalyticsSummary extends StatelessWidget {
                     Text(
                       "100 kWh",
                       style:
-                          Theme.of(context).textTheme.headlineSmall!.copyWith(
-                                color: Colors.white,
-                                fontSize: 23,
-                              ),
+                      Theme.of(context).textTheme.headlineSmall!.copyWith(
+                        color: Colors.white,
+                        fontSize: 23,
+                      ),
                     ),
 
                     const SizedBox(height: CcSizes.spaceBtnItems_1 / 3),
 
                     // sub
                     Text(
-                      "Worn/Used Energy",
+                      "Sold Energy",
                       style:
-                          Theme.of(context).textTheme.headlineSmall!.copyWith(
-                                color: Colors.yellowAccent,
-                                fontSize: 15,
-                              ),
+                      Theme.of(context).textTheme.headlineSmall!.copyWith(
+                        color: Colors.yellowAccent,
+                        fontSize: 15,
+                      ),
                     ),
                   ],
                 ),
 
-                Row(
-                  children: [
-                    InkWell(
-                      onTap: () {},
-                      child: Container(
-                        padding: const EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                          color: Colors.transparent,
-                          border: Border.all(color: Colors.white),
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: Text(
-                          "Buy More",
-                          style: Theme.of(context)
-                              .textTheme
-                              .headlineSmall!
-                              .copyWith(color: Colors.white, fontSize: 15),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(width: 9),
-                  ],
-                ),
+                // Row(
+                //   children: [
+                //     InkWell(
+                //       onTap: () {},
+                //       child: Container(
+                //         padding: const EdgeInsets.all(10),
+                //         decoration: BoxDecoration(
+                //           color: Colors.transparent,
+                //           border: Border.all(color: Colors.white),
+                //           borderRadius: BorderRadius.circular(10),
+                //         ),
+                //         child: Text(
+                //           "Buy More",
+                //           style: Theme.of(context)
+                //               .textTheme
+                //               .headlineSmall!
+                //               .copyWith(color: Colors.white, fontSize: 15),
+                //         ),
+                //       ),
+                //     ),
+                //     const SizedBox(width: 9),
+                //   ],
+                // ),
               ],
             ),
           ],

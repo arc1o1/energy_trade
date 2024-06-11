@@ -103,6 +103,30 @@ class SignupForm extends StatelessWidget {
 
             const SizedBox(height: CcSizes.spaceBtnInputFields),
 
+            // address
+            TextFormField(
+              controller: signupController.phoneNumber,
+              validator: (value) => CcValidator.validatePhoneNumber(value),
+              decoration: const InputDecoration(
+                labelText: "Address",
+                prefixIcon: Icon(Icons.place),
+              ),
+            ),
+
+            const SizedBox(height: CcSizes.spaceBtnInputFields),
+
+            // postal code
+            TextFormField(
+              controller: signupController.phoneNumber,
+              validator: (value) => CcValidator.validatePhoneNumber(value),
+              decoration: const InputDecoration(
+                labelText: "Postal Code",
+                prefixIcon: Icon(Icons.place),
+              ),
+            ),
+
+            const SizedBox(height: CcSizes.spaceBtnInputFields),
+
             // password
             Obx(
               () => TextFormField(
@@ -115,6 +139,27 @@ class SignupForm extends StatelessWidget {
                   suffixIcon: IconButton(
                       onPressed: () => signupController.hidePassword.value =
                           !signupController.hidePassword.value,
+                      icon: Icon(signupController.hidePassword.value
+                          ? Icons.visibility_off_rounded
+                          : Icons.visibility_rounded)),
+                ),
+              ),
+            ),
+
+            const SizedBox(height: CcSizes.spaceBtnInputFields),
+
+            // confirm password
+            Obx(
+                  () => TextFormField(
+                controller: signupController.password,
+                validator: (value) => CcValidator.validatePassword(value),
+                obscureText: signupController.hidePassword.value,
+                decoration: InputDecoration(
+                  labelText: "Confirm Password",
+                  prefixIcon: const Icon(Icons.lock),
+                  suffixIcon: IconButton(
+                      onPressed: () => signupController.hidePassword.value =
+                      !signupController.hidePassword.value,
                       icon: Icon(signupController.hidePassword.value
                           ? Icons.visibility_off_rounded
                           : Icons.visibility_rounded)),

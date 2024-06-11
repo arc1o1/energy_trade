@@ -24,12 +24,9 @@ class AllProductsScreen extends StatelessWidget {
     } else if (number == 1) {
       containerColor = Colors.green;
       textColor = Colors.white;
-      energyClass = "GEOTHERMAL";
+      energyClass = "BIOMASS";
+
     } else if (number == 2) {
-      containerColor = Colors.cyan;
-      textColor = Colors.white;
-      energyClass = "BATTERY";
-    } else if (number == 3) {
       containerColor = Colors.lightGreen;
       textColor = Colors.white;
       energyClass = "WIND";

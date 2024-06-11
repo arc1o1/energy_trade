@@ -37,8 +37,11 @@ class EnergyProductionTab extends StatelessWidget {
                         children: [
                           Row(
                             children: [
+                              // title for the graph
+                              // energy consumption for consumer
+                              // energy production for the producer
                               Text(
-                                "Energy Production",
+                                "Energy Purchase/Consumption",
                                 style: Theme.of(context)
                                     .textTheme
                                     .headlineSmall!
@@ -77,29 +80,29 @@ class EnergyProductionTab extends StatelessWidget {
                                 ],
                               ),
 
-                              // legend 02
-                              Row(
-                                children: [
-                                  Container(
-                                    width: 10,
-                                    height: 10,
-                                    decoration: BoxDecoration(
-                                        color: Colors.cyan,
-                                        borderRadius: BorderRadius.circular(2)),
-                                  ),
-
-                                  const SizedBox(width: 10),
-
-                                  // purchase
-                                  Text(
-                                    "Sell",
-                                    style: Theme.of(context)
-                                        .textTheme
-                                        .headlineSmall!
-                                        .copyWith(fontSize: 15),
-                                  ),
-                                ],
-                              ),
+                          //     // legend 02
+                          //     Row(
+                          //       children: [
+                          //         Container(
+                          //           width: 10,
+                          //           height: 10,
+                          //           decoration: BoxDecoration(
+                          //               color: Colors.cyan,
+                          //               borderRadius: BorderRadius.circular(2)),
+                          //         ),
+                          //
+                          //         const SizedBox(width: 10),
+                          //
+                          //         // purchase
+                          //         Text(
+                          //           "Sell",
+                          //           style: Theme.of(context)
+                          //               .textTheme
+                          //               .headlineSmall!
+                          //               .copyWith(fontSize: 15),
+                          //         ),
+                          //       ],
+                          //     ),
                             ],
                           )
                         ],
@@ -123,10 +126,13 @@ class EnergyProductionTab extends StatelessWidget {
                           fontSize: 11,
                         ),
                       ),
+
+                      // expenses data for the consumer
                       series: <CartesianSeries>[
                         StackedColumnSeries<ChartData, String>(
                             spacing: 0.5,
                             groupName: 'Group A',
+                            width: 0.3,
                             borderRadius: const BorderRadius.only(
                               topLeft: Radius.circular(3),
                               topRight: Radius.circular(3),
@@ -134,18 +140,22 @@ class EnergyProductionTab extends StatelessWidget {
                             dataSource: chartData,
                             color: Colors.blue.shade700,
                             xValueMapper: (ChartData data, _) => data.x,
-                            yValueMapper: (ChartData data, _) => data.y1),
-                        StackedColumnSeries<ChartData, String>(
-                            spacing: 0.5,
-                            borderRadius: const BorderRadius.only(
-                              topLeft: Radius.circular(3),
-                              topRight: Radius.circular(3),
-                            ),
-                            groupName: 'Group B',
-                            dataSource: chartData,
-                            color: Colors.cyan.shade400,
-                            xValueMapper: (ChartData data, _) => data.x,
-                            yValueMapper: (ChartData data, _) => data.y2),
+                            yValueMapper: (ChartData data, _) => data.y1,
+                        ),
+
+                        // // sales data for the producer of energy
+                        // StackedColumnSeries<ChartData, String>(
+                        //     spacing: 0.5,
+                        //     borderRadius: const BorderRadius.only(
+                        //       topLeft: Radius.circular(3),
+                        //       topRight: Radius.circular(3),
+                        //     ),
+                        //     groupName: 'Group B',
+                        //     dataSource: chartData,
+                        //     color: Colors.cyan.shade400,
+                        //     xValueMapper: (ChartData data, _) => data.x,
+                        //     yValueMapper: (ChartData data, _) => data.y2,
+                        // ),
                       ],
                     ),
 

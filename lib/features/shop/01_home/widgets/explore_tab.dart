@@ -71,7 +71,7 @@ class ExploringTab extends StatelessWidget {
 
                 // today's news
                 SizedBox(
-                  height: 230,
+                  height: 250,
                   child: ListView.separated(
                     itemCount: 3,
                     shrinkWrap: true,
@@ -100,7 +100,7 @@ class ExploringTab extends StatelessWidget {
 
                 // top news
                 SizedBox(
-                  height: 230,
+                  height: 250,
                   child: ListView.separated(
                     itemCount: 3,
                     shrinkWrap: true,

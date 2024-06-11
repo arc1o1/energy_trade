@@ -1,4 +1,4 @@
-import 'package:energy_trade/features/shop/02_analytics/widgets/analytics_summary.dart';
+import 'package:energy_trade/features/shop/02_analytics/widgets/buying_analytics_summary.dart';
 import 'package:energy_trade/utils/constants/colors.dart';
 import 'package:energy_trade/utils/constants/sizes.dart';
 import 'package:energy_trade/utils/helpers/helper_functions.dart';
@@ -13,11 +13,8 @@ class CheckoutScreen extends StatelessWidget {
 
     var eCategories = [
       "Solar",
-      "Battery",
+      "Biomass",
       "Wind",
-      "Geothermal",
-      "Coal",
-      "charcoal",
     ];
 
     var categories = [
@@ -47,7 +44,9 @@ class CheckoutScreen extends StatelessWidget {
           child: Column(
             children: [
               // material summary
-              const AnalyticsSummary(),
+              // same here for consumer it will remain the same
+              // but for a producer it will be selling analytics summary
+              const BuyingAnalyticsSummary(),
 
               const SizedBox(height: CcSizes.spaceBtnItems_1),
 
@@ -75,7 +74,7 @@ class CheckoutScreen extends StatelessWidget {
                     flex: 2,
                     child: SizedBox(
                       width: 100,
-                      height: 40,
+                      height: 50,
                       child: DropdownButtonFormField(
                         items: categories.map((category) {
                           return DropdownMenuItem(
@@ -118,7 +117,7 @@ class CheckoutScreen extends StatelessWidget {
                   Expanded(
                     flex: 2,
                     child: SizedBox(
-                      height: 40,
+                      height: 50,
                       width: 100,
                       child: TextFormField(
                         decoration: InputDecoration(
@@ -163,7 +162,7 @@ class CheckoutScreen extends StatelessWidget {
                     flex: 2,
                     child: Container(
                         width: 100,
-                        height: 40,
+                        height: 50,
                         decoration: BoxDecoration(
                             color: Colors.transparent,
                             border: Border.all(color: Colors.grey),
@@ -202,7 +201,7 @@ class CheckoutScreen extends StatelessWidget {
                   Expanded(
                     flex: 2,
                     child: SizedBox(
-                      height: 40,
+                      height: 50,
                       width: 100,
                       child: TextFormField(
                         decoration: InputDecoration(
@@ -243,7 +242,7 @@ class CheckoutScreen extends StatelessWidget {
                     flex: 2,
                     child: Container(
                         width: 100,
-                        height: 40,
+                        height: 50,
                         decoration: BoxDecoration(
                             color: Colors.transparent,
                             border: Border.all(color: Colors.grey),
@@ -285,7 +284,7 @@ class CheckoutScreen extends StatelessWidget {
                     flex: 2,
                     child: SizedBox(
                       width: 100,
-                      height: 40,
+                      height: 50,
                       child: DropdownButtonFormField(
                         items: eCategories.map((category) {
                           return DropdownMenuItem(
@@ -332,7 +331,7 @@ class CheckoutScreen extends StatelessWidget {
                     flex: 2,
                     child: SizedBox(
                       width: 100,
-                      height: 40,
+                      height: 50,
                       child: DropdownButtonFormField(
                         items: categories.map((category) {
                           return DropdownMenuItem(
@@ -372,7 +371,7 @@ class CheckoutScreen extends StatelessWidget {
                   Expanded(
                     flex: 2,
                     child: SizedBox(
-                      height: 40,
+                      height: 50,
                       width: 100,
                       child: TextFormField(
                         decoration: InputDecoration(

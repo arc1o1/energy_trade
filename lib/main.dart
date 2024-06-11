@@ -8,7 +8,7 @@ void main() {
 
   // await native splash
 
-  // initializa firebase
+  // initialize firebase
 
   // initialize authentication
 

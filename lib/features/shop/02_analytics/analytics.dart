@@ -1,6 +1,6 @@
 import 'package:energy_trade/common/appbar/tabbar.dart';
 import 'package:energy_trade/common/drawer/drawer.dart';
-import 'package:energy_trade/features/shop/02_analytics/widgets/analytics_summary.dart';
+import 'package:energy_trade/features/shop/02_analytics/widgets/buying_analytics_summary.dart';
 import 'package:energy_trade/features/shop/02_analytics/widgets/energy_production_tab.dart';
 import 'package:energy_trade/features/shop/02_analytics/widgets/income_tab.dart';
 import 'package:energy_trade/utils/constants/colors.dart';
@@ -53,7 +53,7 @@ class AnalyticsScreen extends StatelessWidget {
                     ? CcColors.dark
                     : Colors.grey.shade300,
                 expandedHeight:
-                    CcDeviceUtils.getScreenHeight() - 440, // the height
+                    CcDeviceUtils.getScreenHeight() / 3.5, // the height
 
                 // elements are inside a padding widget
                 flexibleSpace: Padding(
@@ -66,10 +66,12 @@ class AnalyticsScreen extends StatelessWidget {
                       SizedBox(height: CcSizes.spaceBtnItems_1 / 2),
 
                       // analytics summary
+                      // for consumer it will be buying analytics
+                      // for producer...it will be selling analytics
+                      //SellingAnalyticsSummary(),
+                      BuyingAnalyticsSummary(),
 
-                      AnalyticsSummary(),
-
-                      SizedBox(height: CcSizes.spaceBtnItems_2),
+                      // SizedBox(height: CcSizes.spaceBtnItems_2),
                     ],
                   ),
                 ),

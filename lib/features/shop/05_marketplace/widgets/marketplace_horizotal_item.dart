@@ -1,5 +1,6 @@
 import 'package:energy_trade/common/images/rounded_image.dart';
 import 'package:energy_trade/features/shop/05_marketplace/marketplace_item_detail.dart';
+import 'package:energy_trade/features/shop/06_checkout/checkout.dart';
 import 'package:energy_trade/utils/constants/image_strings.dart';
 import 'package:energy_trade/utils/constants/sizes.dart';
 import 'package:energy_trade/utils/devices/device_utility.dart';
@@ -89,7 +90,7 @@ class MarketHorizontalItems extends StatelessWidget {
 
                       // subtitle
                       Text(
-                        ":HE Power Solution",
+                        "    : HE Power Solution",
                         style: Theme.of(context)
                             .textTheme
                             .headlineSmall!
@@ -123,7 +124,7 @@ class MarketHorizontalItems extends StatelessWidget {
 
                       // subtitle
                       Text(
-                        ":Available, 100kWh",
+                        "    : Available, 100kWh",
                         style: Theme.of(context)
                             .textTheme
                             .headlineSmall!
@@ -149,7 +150,7 @@ class MarketHorizontalItems extends StatelessWidget {
                           style: Theme.of(context)
                               .textTheme
                               .headlineSmall!
-                              .copyWith(fontSize: 15),
+                              .copyWith(fontSize: 13),
                           softWrap: true,
                           maxLines: 3,
                         ),
@@ -157,7 +158,7 @@ class MarketHorizontalItems extends StatelessWidget {
 
                       // subtitle
                       Text(
-                        " per kWh",
+                        "       per kWh",
                         style: Theme.of(context)
                             .textTheme
                             .headlineSmall!
@@ -165,6 +166,102 @@ class MarketHorizontalItems extends StatelessWidget {
                         softWrap: true,
                         maxLines: 3,
                       ),
+                    ],
+                  ),
+
+                  const SizedBox(height: CcSizes.spaceBtnItems_2 / 3),
+
+                  // location
+                  Row(
+                    children: [
+                      // title
+                      Container(
+                        color: Colors.transparent,
+                        padding: EdgeInsets.zero,
+                        width: 60,
+                        child: Text(
+                          "Address",
+                          style: Theme.of(context)
+                              .textTheme
+                              .headlineSmall!
+                              .copyWith(fontSize: 13),
+                          softWrap: true,
+                          maxLines: 3,
+                        ),
+                      ),
+
+                      // subtitle
+                      Text(
+                        ":  14126, Mbweni JKT, DSM",
+                        style: Theme.of(context)
+                            .textTheme
+                            .headlineSmall!
+                            .copyWith(fontSize: 13, color: Colors.grey),
+                        softWrap: true,
+                        maxLines: 3,
+                      ),
+                    ],
+                  ),
+
+                  const SizedBox(height: CcSizes.spaceBtnItems_2 / 3),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          Container(
+                            width: 25,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              border: Border.all(color: Colors.black),
+                              borderRadius: BorderRadius.circular(200),
+                            ),
+                            child: Icon(Icons.remove, color: Colors.black,),
+                          ),
+
+                          const SizedBox(width: 10),
+
+                          Container(
+                            height: 25,
+                            width: 50,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Colors.grey.shade200,
+                              border: Border.all(),
+                            ),
+                            child: Center(child: Text("2", style: Theme.of(context).textTheme.headlineSmall!.copyWith(color: Colors.black, fontSize: 13),)),
+                          ),
+
+                          const SizedBox(width: 10),
+
+                          Container(
+                            width: 25,
+                            decoration: BoxDecoration(
+                              color: Colors.black,
+                              borderRadius: BorderRadius.circular(200),
+                            ),
+                            child: const Icon(Icons.add, color: Colors.white,),
+                          ),
+                        ],
+                      ),
+
+                      SizedBox(width: CcDeviceUtils.getScreenWidth(context) / 5,),
+
+                      InkWell(
+                        onTap: () => Get.to(() => const CheckoutScreen()),
+                        child: Container(
+                          height: 30,
+                          width: 50,
+                          decoration: BoxDecoration(
+                            color: containerColor,
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Center(child: Text("Buy", style: Theme.of(context).textTheme.headlineSmall!.copyWith(color: Colors.white, fontSize: 13),),
+                          ),
+                        ),
+                      ),
+
+
                     ],
                   ),
 

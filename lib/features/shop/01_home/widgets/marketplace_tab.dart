@@ -1,4 +1,4 @@
-import 'package:energy_trade/features/shop/02_analytics/widgets/analytics_summary.dart';
+import 'package:energy_trade/features/shop/02_analytics/widgets/buying_analytics_summary.dart';
 import 'package:energy_trade/features/shop/05_marketplace/widgets/marketplace_table_filter.dart';
 import 'package:energy_trade/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
@@ -11,10 +11,8 @@ class MarketplaceTab extends StatelessWidget {
     // var
     var categories = [
       "Solar",
-      "Geothermal",
-      "Battery",
-      "Charcoal",
       "Wind",
+      "Biomass",
     ];
 
     // content
@@ -25,12 +23,13 @@ class MarketplaceTab extends StatelessWidget {
             padding: const EdgeInsets.all(20),
             child: Column(
               children: [
-                const AnalyticsSummary(),
-
-                const SizedBox(height: CcSizes.spaceBtnItems_1),
-
-                // divider
-                const Divider(color: Colors.black26),
+                // summary on the energy owned by he user
+                // const AnalyticsSummary(),
+                //
+                // const SizedBox(height: CcSizes.spaceBtnItems_1),
+                //
+                // // divider
+                // const Divider(color: Colors.black26),
 
                 const SizedBox(height: CcSizes.spaceBtnItems_1),
 
@@ -39,7 +38,7 @@ class MarketplaceTab extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Expanded(
-                      flex: 3,
+                      flex: 2,
                       child: Text(
                         "Energy Type",
                         style: Theme.of(context)
@@ -54,7 +53,7 @@ class MarketplaceTab extends StatelessWidget {
                       flex: 2,
                       child: SizedBox(
                         width: 100,
-                        height: 40,
+                        height: 60,
                         child: DropdownButtonFormField(
                           items: categories.map((category) {
                             return DropdownMenuItem(
@@ -134,7 +133,7 @@ class MarketplaceTab extends StatelessWidget {
 
               // rows
               rows: [
-                for (int i = 0; i < 10; i++)
+                for (int i = 0; i < 20; i++)
                   DataRow(
                     color: WidgetStateProperty.resolveWith(
                         (states) => Colors.grey.shade200),
@@ -164,7 +163,7 @@ class MarketplaceTab extends StatelessWidget {
                         Center(
                           child: Container(
                             color: Colors.transparent,
-                            width: 40,
+                            width: 50,
                             child: Center(
                               child: Text(
                                 "3000/= ",

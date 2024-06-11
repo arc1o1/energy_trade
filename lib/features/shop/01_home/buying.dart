@@ -23,21 +23,16 @@ class BuyingScreen extends StatelessWidget {
     var energyClass = "SOLAR";
     var number = 0;
 
-    if (title == "Geothermal") {
+    if (title == "Biomass") {
       containerColor = Colors.green;
       textColor = Colors.white;
-      energyClass = "GEOTHERMAL";
+      energyClass = "BIOMASS";
       number = 1;
-    } else if (title == "Battery") {
-      containerColor = Colors.cyan;
-      textColor = Colors.white;
-      energyClass = "BATTERY";
-      number = 2;
     } else if (title == "Wind") {
       containerColor = Colors.lightGreen;
       textColor = Colors.white;
       energyClass = "WIND";
-      number = 3;
+      number = 2;
     }
 
     // scaffold

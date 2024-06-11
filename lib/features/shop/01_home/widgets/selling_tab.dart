@@ -1,4 +1,4 @@
-import 'package:energy_trade/features/shop/02_analytics/widgets/analytics_summary.dart';
+import 'package:energy_trade/features/shop/02_analytics/widgets/selling_analytics_summary.dart';
 import 'package:energy_trade/utils/constants/sizes.dart';
 import 'package:energy_trade/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
@@ -18,11 +18,8 @@ class SellingTab extends StatelessWidget {
 
     var eCategories = [
       "Solar",
-      "Battery",
+      "Biomass",
       "Wind",
-      "Geothermal",
-      "Coal",
-      "charcoal",
     ];
 
     // scrollview
@@ -31,7 +28,7 @@ class SellingTab extends StatelessWidget {
         padding: const EdgeInsets.all(20),
         child: Column(
           children: [
-            const AnalyticsSummary(),
+            const SellingAnalyticsSummary(),
 
             const SizedBox(height: CcSizes.spaceBtnItems_1),
 
@@ -59,7 +56,7 @@ class SellingTab extends StatelessWidget {
                   flex: 2,
                   child: SizedBox(
                     width: 100,
-                    height: 40,
+                    height: 50,
                     child: DropdownButtonFormField(
                       items: categories.map((category) {
                         return DropdownMenuItem(
@@ -104,7 +101,7 @@ class SellingTab extends StatelessWidget {
                   flex: 2,
                   child: SizedBox(
                     width: 100,
-                    height: 40,
+                    height: 50,
                     child: DropdownButtonFormField(
                       items: categories.map((category) {
                         return DropdownMenuItem(
@@ -230,7 +227,7 @@ class SellingTab extends StatelessWidget {
                   flex: 2,
                   child: SizedBox(
                     width: 100,
-                    height: 40,
+                    height: 60,
                     child: DropdownButtonFormField(
                       items: eCategories.map((category) {
                         return DropdownMenuItem(
